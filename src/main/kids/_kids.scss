@@ -1,0 +1,559 @@
+/* kids */
+#kids {
+	width: 100%;
+	height: 720px;
+	box-sizing: border-box;
+	padding-top: 20px;
+	position: relative;
+
+	.inner {
+		width: 1180px;
+		margin: 0px auto;
+		height: 100%;
+		position: relative;
+
+		.left_box {
+			width: 30%;
+			height: 100%;
+			padding-top: 100px;
+			box-sizing: border-box;
+			float: left;
+			opacity: 0;
+			transition: 1s;
+			transform: translateY(30%);
+			transition-delay: 0.3s;
+
+			.txt_box {
+				margin-bottom: 40px;
+				h2 {
+					font: bold 50px/1 "Hind Guntur";
+					letter-spacing: -1px;
+					color: #111;
+					margin-bottom: 10px;
+					transform: translateY(-50%);
+					transition: 0.6s;
+					opacity: 0;
+				}
+
+				.txt_box_div {
+					margin-bottom: 20px;
+					transform: translateY(-50%);
+					transition: 0.5s;
+					transition-delay: 0.1s;
+					opacity: 0;
+					p {
+						width: 100%;
+						float: left;
+						font: bold 18px/1 "Hind Guntur";
+						color: #111;
+						margin-bottom: 5px;
+						letter-spacing: -0.3px;
+					}
+
+					div {
+						width: 100%;
+						float: left;
+						text-align: right;
+						position: relative;
+						.more_detail {
+							font: bold 18px/1 "roboto";
+							color: #111;
+							letter-spacing: -0.3px;
+							margin-right: 10px;
+							position: relative;
+							top: -5px;
+						}
+						.btn {
+							display: inline-block;
+							width: 26px;
+							height: 26px;
+							border: 2px solid #111;
+							position: relative;
+							perspective: 700px;
+							transition: 0.3s;
+
+							&::before {
+								content: "";
+								display: block;
+								width: 40%;
+								height: 2px;
+								background-color: #111;
+								position: absolute;
+								top: 50%;
+								left: 25%;
+								margin-top: -1px;
+								transform: rotate(45deg);
+								transform-origin: right;
+								transition: 0.5s;
+							}
+
+							&::after {
+								content: "";
+								display: block;
+								width: 40%;
+								height: 2px;
+								background-color: #111;
+								position: absolute;
+								bottom: 50%;
+								left: 25%;
+								margin-top: 1px;
+								transform: rotate(-45deg);
+								transform-origin: right;
+								transition: 0.5s;
+							}
+
+							&:hover {
+								background-color: #333;
+								border: 2px solid #333;
+								&::after {
+									background-color: #eee;
+								}
+								&::before {
+									background-color: #eee;
+								}
+							}
+						}
+
+						&::before {
+							content: "";
+							display: block;
+							position: absolute;
+							top: 60%;
+							left: 0px;
+							width: 200px;
+							height: 2px;
+							background-color: #111;
+						}
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						clear: both;
+					}
+				}
+
+				> p {
+					font: 400 18px/1.5 "Hind Guntur";
+					color: #444;
+					box-sizing: border-box;
+					padding-right: 20px;
+					transform: translateY(-50%);
+					transition: 0.5s;
+					transition-delay: 0.3s;
+					opacity: 0;
+				}
+
+				&.on {
+					display: block;
+					h2 {
+						transform: translateY(0%);
+						opacity: 1;
+					}
+
+					.txt_box_div {
+						transform: translateY(0%);
+						opacity: 1;
+					}
+
+					p {
+						transform: translateY(0%);
+						opacity: 1;
+					}
+				}
+
+				&.down {
+					h2 {
+						transform: translateY(50%);
+						opacity: 0;
+					}
+
+					.txt_box_div {
+						transform: translateY(50%);
+						opacity: 0;
+					}
+
+					p {
+						transform: translateY(50%);
+						opacity: 0;
+					}
+				}
+			}
+
+			.slider_nav {
+				width: 120px;
+				text-align: center;
+
+				.prev {
+					float: left;
+					display: block;
+					width: 26px;
+					height: 26px;
+					position: relative;
+
+					&::before {
+						content: "";
+						display: block;
+						width: 50%;
+						height: 1px;
+						background-color: #888;
+						position: absolute;
+						top: 50%;
+						left: 25%;
+						margin-top: -1px;
+						transform: rotate(-45deg);
+						transform-origin: left;
+						transition: 0.3s;
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						width: 50%;
+						height: 1px;
+						background-color: #888;
+						position: absolute;
+						bottom: 50%;
+						left: 25%;
+						margin-top: 1px;
+						transform: rotate(45deg);
+						transform-origin: left;
+						transition: 0.3s;
+					}
+
+					&:hover {
+						&::before {
+							background-color: #333;
+						}
+						&::after {
+							background-color: #333;
+						}
+					}
+				}
+
+				.next {
+					float: right;
+					display: block;
+					width: 26px;
+					height: 26px;
+					position: relative;
+
+					&::before {
+						content: "";
+						display: block;
+						width: 50%;
+						height: 1px;
+						background-color: #888;
+						position: absolute;
+						top: 50%;
+						left: 25%;
+						margin-top: -1px;
+						transform: rotate(45deg);
+						transform-origin: right;
+						transition: 0.3s;
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						width: 50%;
+						height: 1px;
+						background-color: #888;
+						position: absolute;
+						bottom: 50%;
+						left: 25%;
+						margin-top: 1px;
+						transform: rotate(-45deg);
+						transform-origin: right;
+						transition: 0.3s;
+					}
+
+					&:hover {
+						&::before {
+							background-color: #333;
+						}
+						&::after {
+							background-color: #333;
+						}
+					}
+				}
+
+				p {
+					display: inline-block;
+					font: 400 18px/1.5 "Hind Guntur";
+					color: #888;
+					letter-spacing: 1px;
+				}
+
+				&::after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
+		}
+
+		.fugure_visual {
+			width: 70%;
+			height: 100%;
+			box-sizing: border-box;
+			float: left;
+			padding: 40px;
+			padding-bottom: 60px;
+			opacity: 0;
+			transition: 1s;
+			transform: translateY(30%);
+
+			.frame {
+				margin-left: 20px;
+				width: 700px;
+				height: 100%;
+				position: relative;
+				box-sizing: border-box;
+				overflow: hidden;
+
+				ul {
+					width: 100% * 4;
+					height: 100%;
+					margin-left: -100%;
+
+					li {
+						float: left;
+						width: (100% / 4);
+						height: 100%;
+
+						&[data-index="1"] {
+							background: url(../img/bg1.jpg) no-repeat
+								center/cover;
+						}
+
+						&[data-index="2"] {
+							background: url(../img/bg2.jpg) no-repeat
+								center/cover;
+						}
+
+						&[data-index="3"] {
+							background: url(../img/bg3.jpg) no-repeat
+								center/cover;
+						}
+
+						&[data-index="4"] {
+							background: url(../img/bg4.jpg) no-repeat
+								center/cover;
+						}
+					}
+
+					&::after {
+						content: "";
+						display: block;
+						clear: both;
+					}
+				}
+			}
+		}
+
+		.line_nav {
+			width: 2px;
+			height: 80%;
+			background-color: #aaa;
+			position: absolute;
+			right: 0px;
+			bottom: 60px;
+			opacity: 0;
+			transition: 1s;
+			transform: translateY(30%);
+
+			.line_nav_cl {
+				width: 100%;
+				height: 25%;
+				background-color: #111;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				transition: 1.3s;
+			}
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 140px;
+		background-color: #333;
+		z-index: -1;
+		transition: 1s;
+		opacity: 0;
+		transition-delay: 0.7s;
+		transform: translateY(60%);
+	}
+
+	&.on {
+		.inner {
+			.left_box {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			.fugure_visual {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			.line_nav {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		&::after {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+//tablet
+@media screen and (max-width: $tablet) {
+	/* kids */
+	#kids {
+		padding-top: 0px;
+		.inner {
+			width: 100%;
+
+			.left_box {
+				background-color: #fff;
+				position: absolute;
+				bottom: 40px;
+				right: 0px;
+				width: 80%;
+				max-width: 540px;
+				height: auto;
+				padding: 40px 20px 20px 40px;
+				box-sizing: border-box;
+				float: left;
+				z-index: 2;
+
+				.txt_box {
+					margin-bottom: 0px;
+					h2 {
+						font: bold 40px/1 "Hind Guntur";
+						margin-bottom: 5px;
+					}
+
+					.txt_box_div {
+						margin-bottom: 10px;
+						p {
+							margin-right: 5px;
+							width: auto;
+							float: left;
+							margin-bottom: 5px;
+							font-weight: 400;
+						}
+
+						div {
+							margin-top: 10px;
+							text-align: left;
+							box-sizing: border-box;
+							padding-left: 200px;
+
+							&::before {
+								width: 180px;
+							}
+						}
+					}
+
+					> p {
+						display: none;
+					}
+				}
+			}
+
+			.fugure_visual {
+				width: 100%;
+				float: left;
+				padding: 30px;
+				padding-bottom: 60px;
+
+				.frame {
+					margin-left: 0px;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.line_nav {
+				display: none;
+			}
+		}
+	}
+}
+
+//mobile
+@media screen and (max-width: $mobile) {
+	/* kids */
+	#kids {
+		height: 500px;
+		.inner {
+			.left_box {
+				bottom: 20px;
+				width: 80%;
+				max-width: auto;
+				padding: 30px 20px 20px 30px;
+				.txt_box {
+					margin-bottom: 20px;
+					h2 {
+						font: bold 24px/1 "Hind Guntur";
+						margin-bottom: 5px;
+					}
+
+					.txt_box_div {
+						margin-bottom: 10px;
+						p {
+							font-size: 16px;
+							margin-right: 3px;
+							margin-bottom: 1px;
+						}
+
+						div {
+							display: none;
+						}
+					}
+
+					> p {
+						display: none;
+					}
+				}
+
+				.slider_nav {
+					width: 100px;
+					p {
+						font: 400 16px/1.5 "Hind Guntur";
+					}
+				}
+			}
+
+			.fugure_visual {
+				width: 100%;
+				float: left;
+				padding: 30px;
+				padding-bottom: 60px;
+
+				.frame {
+					margin-left: 0px;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}

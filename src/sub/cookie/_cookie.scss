@@ -1,0 +1,97 @@
+#popup {
+	width: 400px;
+	height: 400px;
+	background-color: #fff;
+	border: 1px solid #333;
+	box-sizing: border-box;
+	padding: 20px;
+
+	.cookie_content {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		border: 1px solid rgb(0, 0, 0);
+		h1 {
+			margin-top: 140px;
+			color: #222;
+			font: 700 18px/1 "Noto Sans KR";
+			text-align: center;
+			&::after {
+				content: "";
+				display: block;
+				width: 20px;
+				height: 2px;
+				background-color: #222;
+				margin: 0px auto;
+				margin-top: 16px;
+				margin-bottom: 16px;
+			}
+		}
+
+		p {
+			text-align: center;
+			font: 400 16px/1.3 "Noto Sans KR";
+			letter-spacing: -0.5px;
+			margin-bottom: 5px;
+			color: #222;
+		}
+	}
+	.wrap {
+		position: absolute;
+		bottom: 40px;
+		left: 40px;
+		
+		label {
+			margin-left: 5px;
+			font: 400 14px/1 "Noto Sans KR";
+			letter-spacing: -0.5px;
+			color: #222;
+		}
+	}
+
+	.close {
+		position: absolute;
+		bottom: 40px;
+		right: 40px;
+		color: #222;
+		font: 400 14px/1 "Hind Guntur";
+	}
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: url(../img/ckbg1.jpg) no-repeat center/cover;
+		opacity: 0.2;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	
+}
+
+@media screen and (max-width: $mobile) {
+	#popup {
+		width: 300px;
+		height: 300px;
+		padding: 20px;
+	
+		.cookie_content {
+			h1 {
+				margin-top: 80px;
+				font-size: 16px;
+			}
+	
+			p {
+				box-sizing: border-box;
+				padding: 0px 20px;
+				font-size: 14px;
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,229 @@
+/* visual */
+#visual {
+	width: 100%;
+	height: calc(100vh - 140px);
+	background-color: #fff;
+	overflow: hidden;
+
+	.wrap {
+		width: 100%;
+		height: 100%;
+		.txt_box {
+			width: 40%;
+			height: 100%;
+			box-sizing: border-box;
+			position: relative;
+			float: left;
+			z-index: 2;
+			.inner {
+				position: absolute;
+				top: 45%;
+				left: 0px;
+				transform: translateY(-50%);
+				box-sizing: border-box;
+				padding: 0px 8vw;
+
+				li {
+					display: none;
+					transition: 0.5s;
+					h1 {
+						font: 600 50px/1 "Hind Guntur";
+						letter-spacing: -1px;
+						color: #111;
+						margin-bottom: 14px;
+						span {
+							display: block;
+							font: 300 40px/1 "Hind Guntur";
+							letter-spacing: -1px;
+							color: #111;
+						}
+
+						&::after {
+							content: "";
+							display: block;
+							width: 40px;
+							height: 4px;
+							background-color: #333;
+							margin: 10px 0px 20px;
+						}
+					}
+
+					> p {
+						font: 400 18px/1.4 "Hind Guntur";
+						color: #333;
+						margin-bottom: 30px;
+					}
+
+					a {
+						display: block;
+						width: 120px;
+						height: 40px;
+						text-align: center;
+						border: 2px solid #111;
+						font: bold 16px/40px "roboto";
+						color: #111;
+						margin-right: 10px;
+						position: relative;
+						top: -5px;
+					}
+
+					&.on {
+						display: block;
+					}
+					&.next_up {
+						display: block;
+						transform: translateY(-15%);
+						opacity: 0;
+					}
+
+					&.next_down {
+						position: absolute;
+						top: 8vw;
+						left: 8vw;
+						display: block;
+						transform: translateY(15%);
+						opacity: 0;
+					}
+
+					&.prev_up {
+						position: absolute;
+						top: 8vw;
+						left: 8vw;
+						display: block;
+						transform: translateY(-15%);
+						opacity: 0;
+					}
+
+					&.prev_down {
+						display: block;
+						transform: translateY(15%);
+						opacity: 0;
+					}
+				}
+			}
+
+			.txt_box_btns {
+				position: absolute;
+				left: 8vw;
+				bottom: 80px;
+
+				.prev {
+					display: inline-block;
+					width: 80px;
+					height: 40px;
+					border: 1px solid #111;
+					color: #111;
+					text-align: center;
+					line-height: 40px;
+				}
+
+				.next {
+					display: inline-block;
+					width: 80px;
+					height: 40px;
+					border: 1px solid #111;
+					color: #111;
+					text-align: center;
+					line-height: 40px;
+				}
+			}
+		}
+
+		.product {
+			width: 60%;
+			height: 100%;
+			float: left;
+			position: relative;
+
+			ul {
+				width: 100%;
+				height: 100%;
+				position: relative;
+
+				li {
+					position: absolute;
+					top: 47%;
+					left: 100%;
+					transform: translateY(-50%) scale(0.5);
+					opacity: 0;
+					transition: 0.6s;
+					img {
+						width: 520px;
+					}
+
+					&.on {
+						display: block;
+						left: 0px;
+						transform: translate(0%, -50%) scale(1.2);
+						opacity: 1;
+						z-index: 2;
+
+						img {
+							filter: drop-shadow(
+								0px 0px 5px rgba(0, 0, 0, 0.2)
+							);
+						}
+					}
+
+					&.on_next {
+						display: block;
+						position: absolute;
+						left: 75%;
+						transform: translate(-50%, -50%) scale(0.8);
+						filter: blur(5px);
+						opacity: 0.8;
+					}
+
+					&.on_prev {
+						position: absolute;
+						left: -50%;
+						transform: translate(-50%, -50%) scale(1.8);
+						filter: blur(5px);
+						opacity: 0;
+					}
+
+					&.on_prev_base {
+						position: absolute;
+						left: -50%;
+						transform: translate(-50%, -50%) scale(1.8);
+						filter: blur(5px);
+						opacity: 0;
+						transition: 0s;
+					}
+				}
+			}
+
+			.navi {
+				position: absolute;
+				right: 160px;
+				bottom: 80px;
+				font: normal 18px/1 "roboto";
+				color: #aaa;
+				span {
+					font-size: 24px;
+					font-weight: bold;
+					color: #333;
+					margin-right: 5px;
+				}
+			}
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+}
+
+//tablet
+@media screen and (max-width: $tablet) {
+	/* visual */
+	#visual {
+		height: calc(100vh - 100px);
+	}
+}
+
+//mobile
+@media screen and (max-width: $mobile) {
+}

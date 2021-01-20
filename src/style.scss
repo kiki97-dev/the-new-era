@@ -1,0 +1,168 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&display=swap");
+$tablet : 1179px;
+$mobile : 550px;
+
+//reset
+* {margin:0px; padding: 0px;}
+ul, ol, li {list-style: none;}
+a {text-decoration: none; outline: 1; color: #777;}
+.wrap::after {content: ""; display: block; clear: both;}
+.hidden {position: absolute; top: -99999px; opacity: 0;}
+table {border-collapse: collapse;}
+img, fieldset {border:0;}
+textarea {resize:none;}
+input, select, textarea, form, img, label {vertical-align:middle; box-sizing:border-box;}
+
+//main
+@import "main/header/header";
+@import "main/visual/visual";
+@import "main/brand/brand";
+@import "main/kids/kids";
+@import "main/services/services";
+@import "main/creative/creative";
+@import "main/project/project";
+@import "main/business/business";
+@import "main/collection/collection";
+@import "main/banner/banner";
+@import "main/footer/footer";
+
+//sub
+@import "sub/header/header";
+@import "sub/footer/footer";
+@import "sub/department/department";
+@import "sub/community/community";
+@import "sub/member/member";
+@import "sub/faq/faq";
+@import "sub/gallery/gallery";
+@import "sub/location/location";
+@import "sub/cookie/cookie";
+
+
+/* content */
+.content {
+	width: 100%;
+	border-top: 1px solid #ccc;
+	box-sizing: border-box;
+	padding-bottom: 140px;
+
+	.visual {
+		width: 100%;
+		height: 300px;
+		background-color: #000;
+		box-sizing: border-box;
+		padding-top: 110px;
+		margin-bottom: 70px;
+		position: relative;
+
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0.3;
+			animation: visualani 1.5s ease 0.1s;
+			animation-fill-mode: forwards;
+		}
+
+		h1 {
+			color: #fff;
+			text-align: center;
+			font-family: "Hind Guntur", sans-serif;
+			font-weight: bold;
+			font-size: 60px;
+			line-height: 1;
+			letter-spacing: -1px;
+			position: relative;
+			animation: textani 1s ease 0.3s;
+			opacity: 0;
+			animation-fill-mode: forwards;
+
+			span {
+				font: normal 18px/1 "Noto Sans KR";
+				letter-spacing: -0.5px;
+				display: block;
+				color: #fff;
+				margin-top: 10px;
+				animation: textani 1s ease 0.6s;
+				opacity: 0;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+
+	.inner {
+		width: 1180px;
+		margin: 0px auto;
+	}
+}
+@keyframes textani {
+	0% {
+		opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes visualani {
+	0% {
+		transform: scale(1.3);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+//공통 sub css여기다가 넣어야함용
+@media screen and (max-width:$tablet){
+    /* content */
+    .content {
+        margin-top: 20px;
+        padding-bottom: 100px;
+
+        .visual {
+            height: 250px;
+            padding-top: 90px;
+            margin-bottom: 50px;
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+        
+        .inner {
+            width: 100%;
+            padding: 0px 30px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media screen and (max-width:$mobile){
+    /* content */
+    .content {
+		padding-bottom: 80px;
+		.visual {
+			height: 150px;
+			padding-top: 55px;
+			margin-bottom: 30px;
+	
+			h1 {
+				font-size: 30px;
+
+				span {
+					margin-top: 5px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

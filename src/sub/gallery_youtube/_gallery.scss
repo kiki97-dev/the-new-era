@@ -1,0 +1,424 @@
+.gallery {
+	background-color: #fafafa;
+	.visual {
+		&::before {
+			background: url(../img/subbg5.jpg) no-repeat center/cover;
+		}
+	}
+	.inner {
+		.btn_box {
+			margin-bottom: 40px;
+			.youtube_btn,
+			.gallery_btn {
+				display: inline-block;
+				font-family: "Hind Guntur", sans-serif;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 1;
+				color: #888;
+				box-sizing: border-box;
+				position: relative;
+				margin-right: 20px;
+				box-sizing: border-box;
+				letter-spacing: -0.3px;
+				position: relative;
+
+				&.on {
+					color: #333;
+					font-weight: 600;
+				}
+
+				&:last-child::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: -1px;
+					left: -12px;
+					width: 1px;
+					height: 16px;
+					background-color: #888;
+				}
+			}
+		}
+
+		.youtube {
+			h1 {
+				font-family: "Hind Guntur", sans-serif;
+				font-weight: 300;
+				font-size: 40px;
+				line-height: 1;
+				letter-spacing: -1px;
+				color: #111;
+				margin-bottom: 20px;
+
+				span {
+					font: normal 16px/1 "Noto Sans KR";
+					letter-spacing: -0.5px;
+					display: block;
+					margin-bottom: 16px;
+					color: #333;
+				}
+			}
+			ul {
+				width: 100%;
+				margin-bottom: 60px;
+
+				li {
+					background-color: #fff;
+					width: 280px;
+					height: 260px;
+					margin-right: 20px;
+					box-sizing: border-box;
+					float: left;
+					border-radius: 10px;
+					overflow: hidden;
+					box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+					position: relative;
+					transition: 0.5s;
+
+					a {
+						display: block;
+						width: 100%;
+						height: 156px;
+						background-color: #333;
+						margin-bottom: 20px;
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					h3 {
+						box-sizing: border-box;
+						padding: 0px 20px;
+						font: 700 16px/1.2 "Noto Sans KR";
+						color: #333;
+						letter-spacing: -0.5px;
+						margin-bottom: 4px;
+					}
+
+					span {
+						position: absolute;
+						bottom: 20px;
+						left: 20px;
+						font: 400 14px/1.2 "roboto";
+						color: #333;
+					}
+
+					&:last-child {
+						margin-right: 0px;
+					}
+
+					&:hover {
+						box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
+					}
+				}
+
+				&::after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+			}
+		}
+
+		.gallery_con {
+			width: 100%;
+			box-sizing: border-box;
+			position: relative;
+
+			form {
+				width: 100%;
+				max-width: 300px;
+				border: 1px solid #333;
+				box-sizing: border-box;
+				padding: 0px 10px;
+				margin-bottom: 40px;
+				position: relative;
+				label {
+					margin-right: 10px;
+					i {
+						color: #555;
+					}
+				}
+				input[type="text"] {
+					border: none;
+					padding: 10px 0px;
+					font: normal 16px/1 "Noto Sans KR";
+					letter-spacing: -0.3px;
+					background-color: #fafafa;
+				}
+				button {
+					position: absolute;
+					top: 0px;
+					right: -110px;
+					height: 100%;
+					width: 100px;
+					background-color: #222;
+					color: #fff;
+					border: none;
+					border-radius: 1px;
+					font-family: "Noto Sans KR", sans-serif;
+					font-size: 16px;
+					line-height: 1;
+					font-weight: 300;
+					cursor: pointer;
+				}
+			}
+
+			.gallery_con_list {
+				width: 100%;
+				box-sizing: border-box;
+				opacity: 0;
+				transition: 1s;
+				transform: translateY(200px);
+
+				&.on {
+					opacity: 1;
+					transform: translateY(0px);
+				}
+				li {
+					width: 25%;
+					float: left;
+					box-sizing: border-box;
+					padding: 10px 20px 10px 0px;
+
+					.gallery_con_listbox {
+						width: 100%;
+						box-sizing: border-box;
+						padding-bottom: 20px;
+						background-color: #fff;
+						box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+						overflow: hidden;
+						transition: 0.5s;
+						position: relative;
+						a {
+							display: block;
+							margin-bottom: 20px;
+
+							img {
+								width: 100%;
+							}
+						}
+
+						h3 {
+							font-family: "Hind Guntur", sans-serif;
+							font-weight: 700;
+							font-size: 18px;
+							line-height: 1;
+							color: #222;
+							letter-spacing: -0.5px;
+							box-sizing: border-box;
+							padding-left: 20px;
+							padding-right: 20px;
+							margin-bottom: 10px;
+
+							&::after {
+								content: "";
+								display: block;
+								width: 30px;
+								height: 2px;
+								background-color: #222;
+								margin-top: 5px;
+							}
+						}
+
+						p {
+							font-family: "Hind Guntur", sans-serif;
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 1;
+							color: #222;
+							letter-spacing: -0.2px;
+							box-sizing: border-box;
+							padding-left: 20px;
+							padding-right: 20px;
+						}
+
+						&:hover {
+							box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
+						}
+					}
+				}
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
+	}
+}
+.pop {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+
+	.close {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		&::after {
+			content: "CLOSE";
+			display: block;
+			position: absolute;
+			top: 5%;
+			right: 20%;
+			color: #fff;
+			font: 400 20px/1 "Hind Guntur";
+		}
+	}
+
+	.con,
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 70%;
+		max-width: 1130px;
+		height: 80%;
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.gallery {
+		.inner {
+			.youtube {
+				h1 {
+					font-size: 40px;
+
+					span {
+						font: normal 16px/1 "Noto Sans KR";
+						margin-bottom: 10px;
+					}
+				}
+				ul {
+					margin-bottom: 40px;
+
+					li {
+						width: 49%;
+						height: 260px;
+						margin-right: 2%;
+						margin-bottom: 20px;
+
+						&:nth-of-type(2n) {
+							margin-right: 0px;
+						}
+					}
+				}
+			}
+			.gallery_con {
+				.gallery_con_list {
+					li {
+						width: (100% / 3);
+					}
+				}
+			}
+		}
+	}
+	.pop {
+		.close {
+			&::after {
+				top: 15%;
+				right: 6%;
+			}
+		}
+
+		.con,
+		img {
+			width: 90%;
+			height: 60%;
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.gallery {
+		.inner {
+			.gallery_con {
+				.gallery_con_list {
+					li {
+						width: (100% / 2);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.gallery {
+		.inner {
+			.youtube {
+				h1 {
+					font-size: 26px;
+					span {
+						font: normal 14px/1 "Noto Sans KR";
+					}
+				}
+				ul {
+					margin-bottom: 40px;
+
+					li {
+						width: 100%;
+						margin-right: 0%;
+						margin-bottom: 20px;
+					}
+				}
+			}
+			.gallery_con {
+				form {
+					width: 100%;
+					max-width: 200px;
+					padding: 0px 10px;
+					label {
+						margin-right: 10px;
+						i {
+							color: #555;
+						}
+					}
+					input[type="text"] {
+						width: 120px;
+						padding: 10px 0px;
+						font: normal 12px/1 "Noto Sans KR";
+						
+					}
+					button {
+						right: -70px;
+						width: 60px;
+						font-size: 12px;
+					}
+				}
+				.gallery_con_list {
+					li {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.pop {
+		.close {
+			&::after {
+				top: 48%;
+				right: 5%;
+			}
+		}
+		.con,
+		img {
+			top: 4%;
+			transform: translate(-50%, 0%);
+			width: 100%;
+			height: 40%;
+		}
+	}
+}

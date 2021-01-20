@@ -1,0 +1,561 @@
+.members {
+	.visual {
+		&::before {
+			background: url(../img/subbg3.jpg) no-repeat center/cover;
+		}
+	}
+	.inner {
+		
+		form {
+			width: 100%;
+			margin: 0px auto;
+
+			fieldset {
+				h2 {
+					font: bold 28px/1 "Noto Sans KR";
+					color: #222;
+					letter-spacing: -1px;
+					margin-bottom: 10px;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 2px;
+						background-color: #222;
+						margin-top: 14px;
+					}
+				}
+
+				.infotable {
+					width: 100%;
+					margin-bottom: 10px;
+					tbody {
+						tr {
+							border-bottom: 1px solid #ddd;
+							th {
+								width: 15%;
+								text-align: left;
+								vertical-align: middle;
+								label {
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									letter-spacing: -0.5px;
+
+									span {
+										display: none;
+										color: red;
+
+										&.error {
+											display: inline-block;
+										}
+									}
+								}
+							}
+							td {
+								vertical-align: middle;
+								font: normal 16px/1 "Noto Sans KR";
+								color: #333;
+								letter-spacing: -0.5px;
+								box-sizing: border-box;
+								padding: 30px 0px;
+
+								input[type="text"] {
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									letter-spacing: -0.5px;
+									box-sizing: border-box;
+									padding: 6px;
+									border: 1px solid #bbb;
+									&.error {
+										border: 1px solid red;
+										background-color: rgba(255, 0, 0, 0.100);
+									}
+								}
+								select {
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									letter-spacing: -0.5px;
+									box-sizing: border-box;
+									padding: 6px;
+									margin-right: 10px;
+									margin-left: 10px;
+									border: 1px solid #bbb;
+									min-width: 80px;
+
+									&:nth-of-type(1) {
+										margin-left: 0px;
+									}
+								}
+
+								input[type="radio"] {
+									margin: 0px 10px;
+								}
+
+								label {
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									letter-spacing: -0.5px;
+								}
+
+								input[type="tel"] {
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									letter-spacing: -0.5px;
+									box-sizing: border-box;
+									padding: 6px;
+									max-width: 80px;
+									margin-right: 10px;
+									border: 1px solid #bbb;
+
+									&:last-child {
+										margin-right: 0px;
+									}
+
+									&.error {
+										border: 1px solid red;
+										background-color: rgba(255, 0, 0, 0.100);
+
+									}
+								}
+
+								p {
+									margin-top: 5px;
+									font: normal 14px/1 "Noto Sans KR";
+									color: red;
+									letter-spacing: -0.5px;
+									display: none;
+
+									&.error {
+										display: block;
+									}
+								}
+							}
+						}
+
+						.address {
+							td {
+								div {
+									margin-bottom: 10px;
+								}
+
+								input[type="button"] {
+									cursor: pointer;
+									font: normal 16px/1 "Noto Sans KR";
+									color: #fff;
+									letter-spacing: -0.3px;
+									box-sizing: border-box;
+									padding: 11px 30px;
+									background-color: #555;
+									border: none;
+								}
+
+								> input[type="text"] {
+									width: 49%;
+								}
+							}
+						}
+					}
+				}
+
+				.snsagree {
+					margin-bottom: 60px;
+					input[type="checkbox"] {
+						margin-right: 5px;
+					}
+					> label {
+						font: normal 16px/1 "Noto Sans KR";
+						color: #333;
+						letter-spacing: -0.3px;
+					}
+				}
+
+				.emailagree {
+					margin-bottom: 60px;
+					input[type="checkbox"] {
+						margin-right: 5px;
+					}
+					> label {
+						font: normal 16px/1 "Noto Sans KR";
+						color: #333;
+						letter-spacing: -0.3px;
+					}
+				}
+
+				.logintable {
+					width: 100%;
+					margin-bottom: 10px;
+					tbody {
+						tr {
+							border-bottom: 1px solid #ddd;
+							th {
+								width: 15%;
+								text-align: left;
+								vertical-align: middle;
+								label {
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									letter-spacing: -0.5px;
+									span {
+										display: none;
+										color: red;
+
+										&.error {
+											display: inline-block;
+										}
+									}
+								}
+							}
+							td {
+								box-sizing: border-box;
+								padding: 30px 0px;
+								vertical-align: middle;
+								font: normal 16px/1 "Noto Sans KR";
+								color: #333;
+								letter-spacing: -0.5px;
+
+								span {
+									margin-left: 10px;
+									color: #888;
+									font-size: 14px;
+								}
+
+								p {
+									margin-top: 5px;
+									font: normal 14px/1 "Noto Sans KR";
+									color: red;
+									letter-spacing: -0.3px;
+									display: none;
+
+									&.error {
+										display: block;
+									}
+
+								}
+
+								input[type="text"] {
+									padding: 6px 6px 6px 10px;
+									box-sizing: border-box;
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									border: 1px solid #aaa;
+
+									&.error {
+										border: 1px solid red;
+										background-color: rgba(255, 0, 0, 0.100);
+
+									}
+								}
+
+								input[type="button"] {
+									padding: 11px 30px;
+									box-sizing: border-box;
+									font: normal 16px/1 "Noto Sans KR";
+									color: #fff;
+									background-color: #555;
+									border: none;
+									letter-spacing: -0.3px;
+									cursor: pointer;
+								}
+
+								input[type="password"] {
+									padding: 6px 6px 6px 10px;
+									box-sizing: border-box;
+									font: normal 16px/1 "Noto Sans KR";
+									color: #333;
+									border: 1px solid #aaa;
+
+									&.error {
+										border: 1px solid red;
+										background-color: rgba(255, 0, 0, 0.100);
+
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.allagree {
+					margin-bottom: 10px;
+					input[type="checkbox"] {
+						margin-right: 5px;
+					}
+					label {
+						font: normal 16px/1 "Noto Sans KR";
+						color: #333;
+						letter-spacing: -0.3px;
+					}
+				}
+
+				.termsagree {
+					margin-bottom: 20px;
+					input[type="checkbox"] {
+						margin-right: 5px;
+					}
+					label {
+						font: normal 16px/1 "Noto Sans KR";
+						color: #333;
+						letter-spacing: -0.3px;
+					}
+				}
+
+				.termarea {
+					width: 100%;
+					height: 200px;
+					box-sizing: border-box;
+					padding: 20px;
+					font: normal 16px/1.4 "roboto";
+					color: #333;
+					margin-bottom: 10px;
+				}
+
+				.infosagree {
+					margin-bottom: 20px;
+					input[type="checkbox"] {
+						margin-right: 5px;
+					}
+					label {
+						font: normal 16px/1 "Noto Sans KR";
+						color: #333;
+						letter-spacing: -0.3px;
+					}
+				}
+
+				.infoarea {
+					width: 100%;
+					height: 200px;
+					box-sizing: border-box;
+					padding: 20px;
+					font: normal 16px/1.4 "roboto";
+					color: #333;
+					margin-bottom: 30px;
+				}
+
+				input[type="submit"] {
+					width: 100%;
+					height: 50px;
+					background-color: #333;
+					color: #fff;
+					font: normal 18px/50px "Noto Sans KR";
+					letter-spacing: -0.3px;
+					text-align: center;
+					border: none;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.members {
+		.inner {
+			form {
+				fieldset {
+					.infotable {
+						tbody {
+							tr {
+								th {
+									width: 25%;
+								}
+							}
+
+							.address {
+								td {
+									div {
+										margin-bottom: 10px;
+									}
+									> input[type="text"] {
+										width: 100%;
+										margin-bottom: 10px;
+									}
+								}
+							}
+						}
+					}
+
+					.logintable {
+						tbody {
+							tr {
+								th {
+									width: 25%;
+								}
+								td {
+									span {
+										width: 100%;
+										margin-left: 0px;
+										margin-top: 10px;
+										float: left;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	.members {
+		.inner {
+			form {
+				fieldset {
+					h2 {
+						font: bold 22px/1 "Noto Sans KR";
+					}
+
+					.infotable {
+						tbody {
+							tr {
+								th {
+									width: 35%;
+									label {
+										font: normal 14px/1 "Noto Sans KR";
+									}
+								}
+								td {
+									font: normal 14px/1 "Noto Sans KR";
+									padding: 30px 0px;
+
+									input[type="text"] {
+										font: normal 14px/1 "Noto Sans KR";
+										padding: 6px;
+										width: 100%;
+									}
+									select {
+										font: normal 14px/1 "Noto Sans KR";
+										padding: 5px 0px;
+										margin-right: 5px;
+										margin-left: 5px;
+										min-width: 0px;
+										width: 30%;
+
+										&:nth-of-type(2) {
+											margin-left: 0px;
+										}
+
+										&.birth1 {
+											margin-left: 0px;
+											width: 75%;
+											margin-bottom: 10px;
+										}
+
+										&.citizen {
+											width: 100%;
+										}
+									}
+
+									label {
+										font: normal 14px/1 "Noto Sans KR";
+									}
+
+									input[type="tel"] {
+										font: normal 14px/1 "Noto Sans KR";
+										padding: 6px;
+										width: 30%;
+										max-width: none;
+										margin-right: 5px;
+									}
+								}
+							}
+
+							.address {
+								td {
+									div {
+										input[type="button"] {
+											margin-top: 10px;
+											font: normal 14px/1 "Noto Sans KR";
+											padding: 11px 20px;
+										}
+									}
+
+									> input[type="text"] {
+										width: 100%;
+									}
+								}
+							}
+						}
+					}
+
+					.snsagree {
+						> label {
+							font: normal 14px/1 "Noto Sans KR";
+						}
+					}
+
+					.emailagree {
+						> label {
+							font: normal 14px/1 "Noto Sans KR";
+						}
+					}
+
+					.logintable {
+						tbody {
+							tr {
+								th {
+									width: 35%;
+									label {
+										font: normal 14px/1 "Noto Sans KR";
+									}
+								}
+								td {
+									font: normal 14px/1 "Noto Sans KR";
+
+									span {
+										display: none;
+									}
+
+									input[type="text"] {
+										font: normal 14px/1 "Noto Sans KR";
+										width: 100%;
+									}
+
+									input[type="button"] {
+										display: none;
+									}
+
+									input[type="password"] {
+										width: 100%;
+										font: normal 14px/1 "Noto Sans KR";
+									}
+								}
+							}
+						}
+					}
+
+					.allagree {
+						label {
+							font: normal 14px/1 "Noto Sans KR";
+						}
+					}
+
+					.termsagree {
+						label {
+							font: normal 14px/1 "Noto Sans KR";
+						}
+					}
+
+					.termarea {
+						padding: 5px;
+						font: normal 14px/1.4 "roboto";
+					}
+
+					.infosagree {
+						label {
+							font: normal 14px/1 "Noto Sans KR";
+						}
+					}
+
+					.infoarea {
+						padding: 5px;
+						font: normal 14px/1.4 "roboto";
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+}
