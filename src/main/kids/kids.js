@@ -42,7 +42,7 @@ $(document).ready(function () {
             i++;
             $("#kids .inner .slider_nav p span").text(i);
             $("#kids .inner .line_nav .line_nav_cl").css({ "height": (25 * i) + "%" });
-            brandimg.css({ background: "url(../img/brand" + (i) + ".jpg) no-repeat top/cover" });
+            brandimg.css({ background: "url(img/brand" + (i) + ".jpg) no-repeat top/cover" });
 
         }
 
@@ -84,7 +84,7 @@ $(document).ready(function () {
             i--;
             $("#kids .inner .slider_nav p span").text(i);
             $("#kids .inner .line_nav .line_nav_cl").css({ "height": (25 * i) + "%" });
-            brandimg.css({ background: "url(../img/brand" + (i) + ".jpg) no-repeat top/cover" });
+            brandimg.css({ background: "url(img/brand" + (i) + ".jpg) no-repeat top/cover" });
 
         }
     })
