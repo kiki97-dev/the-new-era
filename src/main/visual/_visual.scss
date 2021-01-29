@@ -8,6 +8,7 @@
 	.wrap {
 		width: 100%;
 		height: 100%;
+		position: relative;
 		.txt_box {
 			width: 40%;
 			height: 100%;
@@ -128,7 +129,6 @@
 					text-align: center;
 					line-height: 36px;
 					border-radius: 20px;
-
 				}
 			}
 		}
@@ -136,7 +136,7 @@
 		.product {
 			width: 60%;
 			height: 100%;
-			float: left;
+			float: right;
 			position: relative;
 
 			ul {
@@ -163,9 +163,7 @@
 						z-index: 2;
 
 						img {
-							filter: drop-shadow(
-								0px 0px 5px rgba(0, 0, 0, 0.2)
-							);
+							filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
 						}
 					}
 
@@ -225,6 +223,96 @@
 	/* visual */
 	#visual {
 		height: calc(100vh - 100px);
+
+		.wrap {
+			.txt_box {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 160px;
+				.inner {
+					top: 0px;
+					left: 0px;
+					transform: translateY(0%);
+					box-sizing: border-box;
+					padding: 0px 8vw;
+
+					li {
+						display: none;
+						transition: 0.5s;
+						h1 {
+							font: 600 40px/1 "Hind Guntur";
+							span {
+								font: 300 30px/1 "Hind Guntur";
+							}
+							&::after {
+								display: none;
+							}
+						}
+
+						> p {
+							display: none;
+						}
+
+						a {
+							display: none;
+						}
+					}
+				}
+
+				.txt_box_btns {
+					left: 8vw;
+					bottom: 30px;
+				}
+			}
+
+			.product {
+				width: 100%;
+
+				ul {
+					li {
+						transform-origin: top left;
+						position: absolute;
+						top: 40%;
+						left: 100%;
+						transform: translateY(-50%) scale(1);
+						box-sizing: border-box;
+						padding: 30px;
+						img {
+							width: 70vw;
+						}
+
+						&.on {
+							left: 50%;
+							transform: translate(-50%, -50%) scale(1);
+						}
+
+						&.on_next {
+							left: 90%;
+							transform: translate(0%, -50%) scale(0.3);
+							opacity: 0.8;
+						}
+
+						&.on_prev {
+							left: -50%;
+							transform: translate(-50%, -50%) scale(1.8);
+							opacity: 0;
+						}
+
+						&.on_prev_base {
+							left: -50%;
+							transform: translate(-50%, -50%) scale(1.8);
+						}
+					}
+				}
+
+				.navi {
+					right: 40px;
+					bottom: 40px;
+				}
+			}
+		}
 	}
 }
 

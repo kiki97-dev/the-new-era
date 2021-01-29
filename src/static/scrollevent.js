@@ -4,7 +4,7 @@ $(document).ready(function () {
     var $boxs = $(".myScroll");
     var len = $boxs.length;
     var posArr;
-    var baseLine = -600;
+    var baseLine = -300;
 
     //처음 로딩시 해당 박스의 세로 위치값을 구해는 함수 호출
     setPos();
